@@ -1,5 +1,11 @@
+# *** Entertainment Center ***
+#
+# This acts as model and kicks the View in
+
 import media
 import fresh_tomatoes
+
+# Model
 
 apocalypse_now = media.Movie("Apocalypse Now",
                              "Let's kill a colonel, sorry terminate his commands",
@@ -33,9 +39,10 @@ v_for_vendetta= media.Movie("V for Vendetta",
                             "https://upload.wikimedia.org/wikipedia/en/thumb/9/9f/Vforvendettamov.jpg/220px-Vforvendettamov.jpg",
                             "https://www.youtube.com/watch?v=qxyUl9M_7vc")
 
-
+# Array as main transfer data
 movies = [apocalypse_now, english_patient, inception, je_vais_bien, oceans_11, v_for_vendetta]
 
+# Starting the element
 fresh_tomatoes.open_movies_page(movies)                     
 
 

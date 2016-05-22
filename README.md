@@ -9,7 +9,11 @@ Authors
 Project description
 ----
 
-Most of the works were already done. There are adaptation done by Guillaume Simler, especially
+Most of the works were already done. There are adaptation done by Guillaume Simler, especially parsing:
+* the css
+* the javascript
+in seperate files
+
 
 Used resources
 ----
@@ -20,9 +24,6 @@ There were no additions from Guillaume Simler, all were preexistents
 
 * [**Bootstrap**](http://getbootstrap.com/), both __css__ and __javascript__ version
 * [**jquery**](https://jquery.com/)
-
-
-### APIs
 
 
 
@@ -38,6 +39,7 @@ How to use
 #### Later on 
 
 * launch **fresh_tomatoes.html**
+
 
 
 Repository 

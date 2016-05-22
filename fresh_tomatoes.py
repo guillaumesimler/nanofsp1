@@ -1,3 +1,8 @@
+# ***** Fresh Tomatoes ****
+# 
+# This files generates the view of the App
+
+
 import webbrowser
 import os
 import re
@@ -10,39 +15,18 @@ main_page_head = '''
 <head>
 	<meta charset="utf-8">
 	<title>Fresh Tomatoes!</title>
+
 	<!-- Bootstrap 3 -->
 	<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
 	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 	<script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
 
+	<!-- CSS -->
 	<link rel="stylesheet" href="css/style.css">
 
-	<script type="text/javascript" charset="utf-8">
-		// Pause the video when the modal is closed
-		$(document).on('click', '.hanging-close, .modal-backdrop, .modal', function (event) {
-			// Remove the src so the player itself gets removed, as this is the only
-			// reliable way to ensure the video stops playing in IE
-			$("#trailer-video-container").empty();
-		});
-		// Start playing the video whenever the trailer modal is opened
-		$(document).on('click', '.movie-tile', function (event) {
-			var trailerYouTubeId = $(this).attr('data-trailer-youtube-id')
-			var sourceUrl = 'http://www.youtube.com/embed/' + trailerYouTubeId + '?autoplay=1&html5=1';
-			$("#trailer-video-container").empty().append($("<iframe></iframe>", {
-			  'id': 'trailer-video',
-			  'type': 'text-html',
-			  'src': sourceUrl,
-			  'frameborder': 0
-			}));
-		});
-		// Animate in the movies when the page loads
-		$(document).ready(function () {
-		  $('.movie-tile').hide().first().show("fast", function showNext() {
-			$(this).next("div").show("fast", showNext);
-		  });
-		});
-	</script>
+	<!-- JS -->
+	<script src="js/app.js"></script>
 </head>
 '''
 
@@ -67,7 +51,7 @@ main_page_content = '''
 	  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="container">
 		  <div class="navbar-header">
-			<a class="navbar-brand" href="#">Fresh Tomatoes Movie Trailers</a>
+			<a class="navbar-brand" href="#">Guillaume's Movie Trailers</a>
 		  </div>
 		</div>
 	  </div>
@@ -84,6 +68,10 @@ main_page_content = '''
 movie_tile_content = '''
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
 	<img src="{poster_image_url}" width="220" height="342">
+
+	<!-- Changes done 
+	* h2 moved to h3
+	* insertion of the storyline --> 
 	<h3>{movie_title}</h3>
 	<p>{movie_storyline}</p>
 </div>

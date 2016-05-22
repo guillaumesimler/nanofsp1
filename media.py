@@ -7,7 +7,7 @@ import webbrowser
 
 class Movie():
 
-	""" This stores the main info about a movie which are its title, its storyline, its poster, íts trailer in Youtube """
+	""" This stores the main info about a movie which are its title, its storyline, its poster, its trailer in Youtube """
 
 
 	def __init__(self, movie_title, movie_storyline, poster_image, trailer_youtube):
